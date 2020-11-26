@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/TakeTPhoneInfo.svg?style=flat)](https://cocoapods.org/pods/TakeTPhoneInfo)
 [![Platform](https://img.shields.io/cocoapods/p/TakeTPhoneInfo.svg?style=flat)](https://cocoapods.org/pods/TakeTPhoneInfo)
 
-Add extra info getter for LFPhoneInfo, Why make a new pod? because podspec can't use `:git` in s.dependency, so I can't just use the modifier version in my repo. so here is make a new pod.
+Add extra info getter for [LFPhoneInfo](https://github.com/muzipiao/LFPhoneInfo), Why make a new pod? because podspec can't use `:git` in s.dependency, so I can't just use the modifier version in my repo. so here is make a new pod.
 
 ## Example
 
