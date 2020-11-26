@@ -1,0 +1,31 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - LFPhoneInfo (0.1.7)
+  - TakeTPhoneInfo (0.1.0):
+    - LFPhoneInfo
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - TakeTPhoneInfo (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+    - LFPhoneInfo
+
+EXTERNAL SOURCES:
+  TakeTPhoneInfo:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  LFPhoneInfo: 3f0ab6cad089a3e403fc322735107e87bc63c9d0
+  TakeTPhoneInfo: 23d35efa0cf4a6927af17f6b9c9595b6b67d70ce
+
+PODFILE CHECKSUM: f18fa47231c3b8082b5f5555fc9edeea0b44129e
+
+COCOAPODS: 1.10.0
