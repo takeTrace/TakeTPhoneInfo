@@ -6,6 +6,9 @@
 //
 
 #import "TTPhoneInfo.h"
+#include <mach/mach.h> // 获取内存
+#import <CoreTelephony/CTTelephonyNetworkInfo.h> // 获取设备运营商
+#import <CoreTelephony/CTCarrier.h> // 获取设备运营商
 #include <resolv.h>
 #include <dns.h>
 #include <arpa/inet.h>
@@ -28,11 +31,11 @@
     return [dnsList firstObject];
 }
 
-+ (NSUInteger)deviceTotalMemoryByte{
++ (unsigned long long)deviceTotalMemoryByte{
     return [NSProcessInfo processInfo].physicalMemory;
 }
 
-+ (NSUInteger)appTakeUpMemoryByte{
++ (long long)appTakeUpMemoryByte{
     int64_t memoryUsageInByte = 0;
     task_vm_info_data_t vmInfo;
     mach_msg_type_number_t count = TASK_VM_INFO_COUNT;
@@ -42,10 +45,10 @@
     } else {
         NSLog(@"Error with task_info(): %s", mach_error_string(kernelReturn));
     }
-    return memoryUsageInByte;
+    return (long long) memoryUsageInByte;
 }
 
-+ (NSUInteger)deviceTotalDiskByte{
++ (long long)deviceTotalDiskByte{
     NSError *error = nil;
     NSDictionary *attrs = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:&error];
     if (error) return 0;
@@ -54,7 +57,7 @@
     return space;
 }
 
-+ (NSUInteger)deviceFreeDiskByte{
++ (long long)deviceFreeDiskByte{
     NSError *error = nil;
     NSDictionary *attrs = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:&error];
     if (error) return 0;

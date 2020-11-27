@@ -11,10 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LFPhoneInfo(TTPhoneInfo)
-@property (class, readonly) NSUInteger deviceTotalMemoryByte;
-@property (class, readonly) NSUInteger appTakeUpMemoryByte;
-@property (class, readonly) NSUInteger deviceTotalDiskByte;
-@property (class, readonly) NSUInteger deviceFreeDiskByte;
+@property (class, readonly) unsigned long long deviceTotalMemoryByte;
+@property (class, readonly) long long appTakeUpMemoryByte;
+@property (class, readonly) long long deviceTotalDiskByte;
+@property (class, readonly) long long deviceFreeDiskByte;
 @property (class, readonly) NSArray<NSString *> *deviceCarrierContryCodes;
 @property (class, readonly) NSString *dnsInfo;
 @end
